@@ -1,0 +1,36 @@
+.btn_ {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn_edituser {
+    background: #00bc77;
+    height: 40px;
+    width: 120px;
+    color: white;
+}
+
+.label_user {
+}
+
+.input_user {
+    border-radius: 5px;
+}
+.user_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 5px;
+}
+.modalUsername {
+    display: none;
+}
+
+.input_user_disabled {
+    color: gainsboro;
+    background-color: rgb(139, 139, 139);
+}

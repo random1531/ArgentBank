@@ -1,9 +1,9 @@
 import React from 'react'
 import HeroBanner from '../Componement/Main/Banner/HeroBanner'
 import Feature from '../Componement/Main/Feature/Feature'
-import logoChat from '../assets/icon-chat.png'
-import logoMoney from '../assets/icon-money.png'
-import logoSecurity from '../assets/icon-security.png'
+import logoChat from '../assets/icon-chat.webp'
+import logoMoney from '../assets/icon-money.webp'
+import logoSecurity from '../assets/icon-security.webp'
 
 export default function Home() {
   return (

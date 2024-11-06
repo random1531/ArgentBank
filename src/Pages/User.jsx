@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux'
 export default function User() {
 
   const userselec = useSelector((state) => state.user)
-  console.log(userselec)
+
   
 
   const handleClickOpen = () => {

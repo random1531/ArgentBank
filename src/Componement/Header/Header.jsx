@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import logo from '../../assets/argentBankLogo.png';
+import logo from '../../assets/argentBankLogo.webp';
 import './header.css'
 import { NavLink } from 'react-router-dom';
 

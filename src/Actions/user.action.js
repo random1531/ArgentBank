@@ -11,7 +11,7 @@ export const fetchUser = () => {
         },
       })
       .then((response) => {
-        dispatch({ type: 'FETCH_USER', payload: response.data.body }); // Accède à la partie body de la réponse
+        dispatch({ type: 'FETCH_USER', payload: response.data.body }); 
       })
       .catch((error) => {
         console.error("Error fetching user:", error);
