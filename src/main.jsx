@@ -9,13 +9,12 @@ import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import User from "./Pages/User";
 import rootReducers from "./Reducers/Index.js";
-import { fetchUser } from "./Actions/user.action.js";
+
 
 const store = configureStore({
   reducer: rootReducers,
   devTools: true,
 });
-store.dispatch(fetchUser());
 
 const router = createBrowserRouter([
   {

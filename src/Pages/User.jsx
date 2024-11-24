@@ -1,18 +1,28 @@
 import React, { useEffect } from "react";
 import Card from "../Componement/Main/Usercompsant/Card/Card";
 import ModalUserName from "../Componement/Main/ModalUsername/ModalUserName";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchUser } from "../Actions/user.action";
 
 export default function User() {
+  
   const userselec = useSelector((state) => state.user);
   const isAuth = localStorage.getItem("token");
 
+  //check si user est connecter
+  const dispatch = useDispatch();
   useEffect(() => {
     if (!isAuth) {
       window.location = "/login";
     }
   }, [isAuth]);
 
+  //fetch de user pour stocker dans le store
+  useEffect(() => {
+    dispatch(fetchUser());
+  }, [dispatch]);
+
+  //ouverture de la modal
   const handleClickOpen = () => {
     const modalUsername = document.querySelector(".modalUsername");
     modalUsername.style.display = "block";

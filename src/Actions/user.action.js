@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 export const FETCH_USER = 'FETCH_USER';
+export const UPDATE_USER = 'UPDATE_USER';
 
 export const fetchUser = () => {
   return (dispatch) => {
@@ -20,7 +21,6 @@ export const fetchUser = () => {
   };
 };
 
-export const UPDATE_USER = 'UPDATE_USER';
 
 export const updateUser = (userName) => {
     return (dispatch) => {
