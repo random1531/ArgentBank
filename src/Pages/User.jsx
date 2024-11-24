@@ -19,7 +19,7 @@ export default function User() {
     <>
       <main className="main bg-dark">
         <div className="header">
-          <h1>Welcome back<br />{`${userselec.user.firstName} ${userselec.user.lastName}`}</h1>
+          <h1>Welcome back<br />{`${userselec.user.firstName} ${userselec.user.userName}`}</h1>
           <button
             className="edit-button"
             onClick={handleClickOpen}
