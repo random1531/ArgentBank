@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { fetchUser } from "../Actions/user.action";
 import "../index.css";
+
 export default function Login() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
@@ -22,8 +23,9 @@ export default function Login() {
     if (data.status === 200) {
       localStorage.setItem("token", data.body.token);
       dispatch(fetchUser());
-
       window.location = "/user";
+    } else {
+      console.error("Login failed:", data.message);
     }
   };
 
@@ -33,7 +35,7 @@ export default function Login() {
         <section className="sign-in-content">
           <i className="fa fa-user-circle sign-in-icon"></i>
           <h1>Sign In</h1>
-          <form>
+          <form onSubmit={connexion}>
             <div className="input-wrapper">
               <label htmlFor="username">Username</label>
               <input
@@ -55,9 +57,7 @@ export default function Login() {
               <label htmlFor="remember-me">Remember me</label>
             </div>
 
-            <button className="sign-in-button" onClick={connexion}>
-              Sign In
-            </button>
+            <button className="sign-in-button">Sign In</button>
           </form>
         </section>
       </main>

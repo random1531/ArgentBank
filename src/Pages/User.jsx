@@ -1,29 +1,35 @@
-import React, { useEffect } from 'react'
-import Card from '../Componement/Main/Usercompsant/Card/Card'
-import ModalUserName from '../Componement/Main/ModalUsername/ModalUserName'
-import { useSelector } from 'react-redux'
+import React, { useEffect } from "react";
+import Card from "../Componement/Main/Usercompsant/Card/Card";
+import ModalUserName from "../Componement/Main/ModalUsername/ModalUserName";
+import { useSelector } from "react-redux";
 
 export default function User() {
+  const userselec = useSelector((state) => state.user);
+  const isAuth = localStorage.getItem("token");
 
-  const userselec = useSelector((state) => state.user)
-
-  
+  useEffect(() => {
+    if (!isAuth) {
+      window.location = "/login";
+    }
+  }, [isAuth]);
 
   const handleClickOpen = () => {
-    const modalUsername = document.querySelector('.modalUsername')
-    modalUsername.style.display = 'block'
-  }
-
+    const modalUsername = document.querySelector(".modalUsername");
+    modalUsername.style.display = "block";
+  };
 
   return (
     <>
       <main className="main bg-dark">
         <div className="header">
-          <h1>Welcome back<br />{`${userselec.user.firstName} ${userselec.user.userName}`}</h1>
-          <button
-            className="edit-button"
-            onClick={handleClickOpen}
-          >Edit Name</button>
+          <h1>
+            Welcome back
+            <br />
+            {`${userselec.user.firstName} ${userselec.user.userName}`}
+          </h1>
+          <button className="edit-button" onClick={handleClickOpen}>
+            Edit Name
+          </button>
           <ModalUserName />
         </div>
 
@@ -32,5 +38,5 @@ export default function User() {
         <Card Tile="Argent Bank Credit Card (x8349)" Amount="$184.30" />
       </main>
     </>
-  )
+  );
 }
