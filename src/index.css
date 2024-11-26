@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
 }
 
@@ -12,6 +12,11 @@ html {
 
 .main {
   flex: 1;
+}
+
+.error_message{
+  margin-top: 1px;
+  color: red;
 }
 
 .bg-dark {

@@ -27,6 +27,7 @@ export default function Header() {
   const handleClick = () => {
     localStorage.removeItem("token");
     setToken(null);
+    dispatch(resetUser());
   };
 
   return (

@@ -9,7 +9,7 @@ import { fetchTransaction } from "../Actions/transaction.action";
 export default function User() {
   const userselec = useSelector((state) => state.user);
   const isAuth = localStorage.getItem("token");
-  const account = useSelector((state) => state.account);
+ 
   //check si user est connecter
   const dispatch = useDispatch();
   useEffect(() => {
@@ -44,8 +44,7 @@ export default function User() {
             Edit Name
           </button>
           <ModalUserName />
-        </div>
-   
+        </div>   
 
         <Card Tile=" Checking (x8349)" Amount="$2,082.79" />
         <Card Tile="Argent Bank Savings (x6712)" Amount="$10,928.42" />

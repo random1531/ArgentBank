@@ -25,6 +25,7 @@ export default function userReducer(state = initialState, action) {
         
         case 'RESET_USER':
           return initialState;
+          
     default:
       return state;
   }

@@ -6,7 +6,7 @@ import "../index.css";
 export default function Login() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
-
+  const [error, SetError] = React.useState("");
   const dispatch = useDispatch();
 
   const connexion = async (e) => {
@@ -22,10 +22,10 @@ export default function Login() {
 
     if (data.status === 200) {
       localStorage.setItem("token", data.body.token);
-      dispatch(fetchUser()); 
+      dispatch(fetchUser());
       window.location = "/user";
     } else {
-      console.error("Login failed:", data.message);
+      SetError("Mauvais identifiant ou Mot de passe");
     }
   };
 
@@ -57,7 +57,10 @@ export default function Login() {
             <input type="checkbox" id="remember-me" />
             <label htmlFor="remember-me">Remember me</label>
           </div>
-          <button type="submit" className="sign-in-button">Sign In</button>
+          <p className="error_message">{error}</p>
+          <button type="submit" className="sign-in-button">
+            Sign In
+          </button>
         </form>
       </section>
     </main>

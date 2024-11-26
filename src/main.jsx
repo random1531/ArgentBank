@@ -10,7 +10,6 @@ import Login from "./Pages/Login";
 import User from "./Pages/User";
 import rootReducers from "./Reducers/Index.js";
 
-
 const store = configureStore({
   reducer: rootReducers,
   devTools: true,
