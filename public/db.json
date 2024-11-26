@@ -1,0 +1,58 @@
+{
+    "Accounts": [
+      {
+        "Amount": 1500.75,
+        "IdUser": "66f606db841a594850465288",
+        "NameAccount": "Compte Courant",
+        "ID": 101
+      },
+      {
+        "Amount": 250.00,
+        "IdUser": "66f606db841a594850465288",
+        "NameAccount": "Épargne",
+        "ID": 102
+      },
+      {
+        "Amount": 890.50,
+        "IdUser": "66f606db841a594850465288",
+        "NameAccount": "Investissements",
+        "ID": 103
+      }
+    ],
+    "Transactions": [
+      {
+        "ID": 201,
+        "Date": "2024-11-01",
+        "Description": "Achat supermarché",
+        "Amount": -50.00,
+        "Balance": 1450.75,
+        "TransactionType": "Débit",
+        "Category": "Courses",
+        "Note": "Paiement par carte",
+        "AccountId": 101
+      },
+      {
+        "ID": 202,
+        "Date": "2024-11-05",
+        "Description": "Salaire",
+        "Amount": 2000.00,
+        "Balance": 2250.00,
+        "TransactionType": "Crédit",
+        "Category": "Revenus",
+        "Note": "Virement mensuel",
+        "AccountId": 102
+      },
+      {
+        "ID": 203,
+        "Date": "2024-11-10",
+        "Description": "Achat actions",
+        "Amount": -500.00,
+        "Balance": 390.50,
+        "TransactionType": "Débit",
+        "Category": "Investissements",
+        "Note": "Achat bourse",
+        "AccountId": 103
+      }
+    ]
+  }
+  

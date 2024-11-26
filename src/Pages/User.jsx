@@ -3,12 +3,13 @@ import Card from "../Componement/Main/Usercompsant/Card/Card";
 import ModalUserName from "../Componement/Main/ModalUsername/ModalUserName";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchUser } from "../Actions/user.action";
+import { fetchAccount } from "../Actions/account.action";
+import { fetchTransaction } from "../Actions/transaction.action";
 
 export default function User() {
-  
   const userselec = useSelector((state) => state.user);
   const isAuth = localStorage.getItem("token");
-
+  const account = useSelector((state) => state.account);
   //check si user est connecter
   const dispatch = useDispatch();
   useEffect(() => {
@@ -17,9 +18,11 @@ export default function User() {
     }
   }, [isAuth]);
 
-  //fetch de user pour stocker dans le store
+  //fetch de user/Account/transaction pour stocker dans les information dans le store store
   useEffect(() => {
     dispatch(fetchUser());
+    dispatch(fetchAccount());
+    dispatch(fetchTransaction());
   }, [dispatch]);
 
   //ouverture de la modal
@@ -42,8 +45,9 @@ export default function User() {
           </button>
           <ModalUserName />
         </div>
+   
 
-        <Card Tile="Argent Bank Checking (x8349)" Amount="$2,082.79" />
+        <Card Tile=" Checking (x8349)" Amount="$2,082.79" />
         <Card Tile="Argent Bank Savings (x6712)" Amount="$10,928.42" />
         <Card Tile="Argent Bank Credit Card (x8349)" Amount="$184.30" />
       </main>

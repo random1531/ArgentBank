@@ -1,4 +1,4 @@
-import { FETCH_USER ,UPDATE_USER } from "../Actions/user.action";
+import { FETCH_USER ,UPDATE_USER,RESET_USER } from "../Actions/user.action";
 
 const initialState = {
   user: {
@@ -22,7 +22,9 @@ export default function userReducer(state = initialState, action) {
           ...state,
           user: action.payload,
         };
-    
+        
+        case 'RESET_USER':
+          return initialState;
     default:
       return state;
   }

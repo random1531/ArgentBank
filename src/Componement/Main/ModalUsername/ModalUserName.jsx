@@ -66,7 +66,7 @@ export default function ModalUserName() {
           />
         </div>
         <div className="btn_">
-          <button type="submit" className="btn_edituser" onClick={handleEdit}>
+          <button type="submit" className="btn_edituser" onClick={handleEdit }>
             Save
           </button>
           <button

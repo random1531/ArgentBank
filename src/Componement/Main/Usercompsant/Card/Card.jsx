@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Card({Tile, Amount}) {
+export default function Card({Tile, Amount,transactionReducerId}) {
   return (
  <>
  <section className="account">
@@ -10,7 +10,7 @@ export default function Card({Tile, Amount}) {
           <p className="account-amount-description">Available Balance</p>
         </div>
         <div className="account-content-wrapper cta">
-          <button className="transaction-button">View transactions</button>
+          <button className="transaction-button" id={transactionReducerId}>View transactions</button>
         </div>
       </section>
  </>

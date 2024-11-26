@@ -2,6 +2,7 @@ import axios from 'axios';
 
 export const FETCH_USER = 'FETCH_USER';
 export const UPDATE_USER = 'UPDATE_USER';
+export const RESET_USER = 'RESET_USER';
 
 export const fetchUser = () => {
   return (dispatch) => {
@@ -39,3 +40,9 @@ export const updateUser = (userName) => {
         });
     }
 }
+
+export const resetUser = () => {
+  return {
+    type: RESET_USER,
+  };
+};
